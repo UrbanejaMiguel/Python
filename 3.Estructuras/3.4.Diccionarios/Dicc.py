@@ -61,8 +61,29 @@ clientes = [
 cliente_filt=[]
 filt=0.1
 for cliente in clientes:
-    if cliente["q_ext"]>=filt:
+    if cliente["q_ext"]<=filt:
         cliente_filt.append(cliente)
 
 print(cliente_filt)
+print("-"*40)
+#Resuelto por el profesor
+def get_client_by_qext(list,q_min,q_max):
+    cliente_filt_2=[]
+    for cliente_2 in list:
+        if q_min<=cliente_2["q_ext"]<=q_max:
+            cliente_filt_2.append(cliente_2)
+    return(cliente_filt_2)
+print(get_client_by_qext(clientes,0.1,0.1))
+print("-"*40)
+#Opcion 2
+def get_cliente_by_qext_2(lista,q_min,q_max):
+    return list(filter(lambda client: q_min<=client["q_ext"]<=q_max,lista))
+  
+print(get_cliente_by_qext_2(clientes,0.1,0.1))
+print("-"*40)
+#Obtener clientes con mas de 30 años y un riesgo por encima del 30%
+def get_client_by_age(lista,age_min,age_max):
+    return list(filter(lambda client: age_min<=client["age"]<=age_max,lista))
 
+print(get_client_by_age(clientes,30,999))
+print("-"*40)
