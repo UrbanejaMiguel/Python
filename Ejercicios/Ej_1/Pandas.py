@@ -11,3 +11,9 @@ print("-"*40)
 tipo_siniestro=df["tipo_siniestro"].unique()
 filtro = df[df["tipo_siniestro"]=="Fallecimiento"]
 print(filtro)
+
+#Pago maximo por fallecimiento
+max_paid =df[df["tipo_siniestro"]=="Fallecimiento"]["pago"].max()
+id_max_paid =df[df["tipo_siniestro"]=="Fallecimiento"]["pago"].idxmax()
+print(id_max_paid, max_paid)
+print(df.loc[id_max_paid])
