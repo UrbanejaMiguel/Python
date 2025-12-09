@@ -1,4 +1,4 @@
-import csv
+import csv #El profesor lo hizo con pandas --> Mirarlo archivo Pandas.py
 
 def get_data():
     b=[]
