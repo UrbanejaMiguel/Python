@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd # type: ignore
 
 #Cargar un fichero con pandas
 df = pd.read_csv("C:\\Users\\miguel.urbanejaferna\\Desktop\\Py\\Curso Milliman\\Python\\Ejercicios\\Ej_1\\data\\siniestros.csv")
