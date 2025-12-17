@@ -41,8 +41,13 @@ def main():
     tabla_unida = join(siniestros, polizas)
     tabla_freq = freq(tabla_unida)
     tabla_final = rangos(tabla_unida)
-    print(tabla_final)
+    return tabla_final
+
+
+def export(df):
+    df.to_excel("./data/resultado.xlsx", index=False, sheet_name="Rangos de edad")
 
 
 if __name__ == "__main__":
-    main()
+    df = main()
+    export(df)
